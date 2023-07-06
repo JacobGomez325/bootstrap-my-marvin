@@ -1,3 +1,33 @@
 jenkins:
-  systemMessage: "Ma nouvelle instance docker"
-
+  systemMessage: "See also: https://github.com/tomasbjerre"
+  numExecutors: 4
+  scmCheckoutRetryCount: 2
+  mode: NORMAL
+  quietPeriod: 5
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: false
+  primaryView:
+    all:
+      name: "all"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: true
+  globalNodeProperties:
+  - envVars:
+      env:
+      - key: "gitlabUrl"
+        value: "http://localhost:80"
+      - key: "jenkinsUrl"
+        value: "http://localhost:8080"
+      - key: "jenkinsGitRepo"
+        value: "https://github.com/tomasbjerre/jenkins-configuration-as-code-sandbox.git"
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - string:
+              scope: GLOBAL
+              id: "gitlab-token"
+              secret: ${personal_access_token}
+              description: "GitLab personal access token"
