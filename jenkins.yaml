@@ -9,7 +9,7 @@ jenkins:
           credentials:
             - usernamePassword:
                 scope: SYSTEM
-                id: sudo_password
-                username: "gojanda
+                id: 2
+                username: "gojanda"
                 password: "demo1234"
           
