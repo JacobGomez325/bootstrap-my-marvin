@@ -6,7 +6,7 @@ jenkins:
           credentials:
             - usernamePassword:
                 scope: SYSTEM
-                id: 273a9c2d-d7b9-4862-8c1f-9d281b36aa2b
+                id: gojanda
                 username: gojanda
                 password: demo1234
           
