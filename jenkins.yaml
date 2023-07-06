@@ -1,12 +1,14 @@
 jenkins:
-  systemMessage: Jenkins demo
+  systemMessage: "Example of configuring credentials in Jenkins"
+
 credentials:
   system:
     domainCredentials:
-       credentials:
-         - usernamePassword:
-            scope: SYSTEM
-            id: gojanda
-            username: gojanda
-            password: demo1234
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "gojanda"
+              username: "gojanda"
+              password: "demo1234"
+              description: "Username/Password Credentials for some-user"
           
