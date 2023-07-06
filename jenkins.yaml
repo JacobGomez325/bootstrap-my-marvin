@@ -1,15 +1,12 @@
 jenkins:
-  systemMessage: "Jenkins demo"
+  systemMessage: Jenkins demo
   credentials:
     system:
       domainCredentials:
-        - domain:
-            name: "localhost:8080"
-            description: "test"
           credentials:
             - usernamePassword:
                 scope: SYSTEM
-                id: 2
-                username: "gojanda"
-                password: "demo1234"
+                id: 273a9c2d-d7b9-4862-8c1f-9d281b36aa2b
+                username: gojanda
+                password: demo1234
           
