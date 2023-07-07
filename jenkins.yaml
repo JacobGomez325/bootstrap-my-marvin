@@ -1,14 +1,13 @@
 jenkins:
   systemMessage: "Example of configuring credentials in Jenkins"
+  numExecutors: 2
+  mode: NORMAL
+  scmCheckoutRetryCount: 3
+  labelString: "master label"
 
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - usernamePassword:
-              scope: GLOBAL
-              id: "gojanda"
-              username: "gojanda"
-              password: "demo1234"
-              description: "Username/Password Credentials for some-user"
-          
+  securityRealm:
+    local:
+    aallowsSignup: false
+    users:
+     - id: gojanda
+     - password: demo1234
